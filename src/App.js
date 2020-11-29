@@ -1,10 +1,12 @@
 import './App.css';
+import './components/movies';
+import Movies from './components/movies';
 
 function App() {
   return (
-    <main role="main" class="container">
-      <h1>Hello world!</h1>
-    </main>
+    <div>
+      <Movies />
+    </div>
   );
 }
 
