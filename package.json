@@ -14,6 +14,7 @@
     "ag-grid-community": "^24.1.0",
     "ag-grid-react": "^24.1.1",
     "bootstrap": "^4.5.3",
+    "joi-browser": "^13.4.0",
     "live-server": "^1.2.1",
     "lodash": "^4.17.20",
     "prop-types": "^15.7.2",

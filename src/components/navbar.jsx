@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, NavLink} from 'react-router-dom';
 import Customers from './customers';
+import LoginForm from './loginForm';
 
 const Navbar = () => {
   return (
@@ -21,23 +22,23 @@ const Navbar = () => {
       </button>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/movies">
-              Movies
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/rentals">
-              Rentals
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/customers">
-              Customers
-            </NavLink>
-          </li>
-        </ul>
+        <div className="navbar-nav">
+          <NavLink className="nav-link nav-item" to="/movies">
+            Movies
+          </NavLink>
+
+          <NavLink className="nav-link nav-item" to="/rentals">
+            Rentals
+          </NavLink>
+
+          <NavLink className="nav-link nav-item" to="/customers">
+            Customers
+          </NavLink>
+
+          <NavLink className="nav-link nav-item" to="/login">
+            Login
+          </NavLink>
+        </div>
       </div>
     </nav>
   );

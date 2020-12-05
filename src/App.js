@@ -12,6 +12,7 @@ import Rentals from './components/rentals';
 import NotFound from './components/notFound';
 import React from 'react';
 import MovieForms from './components/movieForm';
+import LoginForm from './components/loginForm';
 
 library.add(fab, fas, far);
 
@@ -21,6 +22,7 @@ function App() {
       <Navbar />
       <main className="container">
         <Switch>
+          <Route path="/login" component={LoginForm} />
           <Route path="/movies/:id" component={MovieForms} />
           <Route path="/movies" component={Movies} />
           <Route path="/customers" component={Customers} />
