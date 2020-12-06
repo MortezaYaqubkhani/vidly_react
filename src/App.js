@@ -13,6 +13,8 @@ import NotFound from './components/notFound';
 import React from 'react';
 import MovieForms from './components/movieForm';
 import LoginForm from './components/loginForm';
+import RegisterForm from './components/registerForm';
+import NewMovieForm from './components/newMovieForm';
 
 library.add(fab, fas, far);
 
@@ -22,8 +24,10 @@ function App() {
       <Navbar />
       <main className="container">
         <Switch>
+
+          <Route path="/register" component={RegisterForm} />
           <Route path="/login" component={LoginForm} />
-          <Route path="/movies/:id" component={MovieForms} />
+          <Route path="/movies/:id" component={NewMovieForm} />
           <Route path="/movies" component={Movies} />
           <Route path="/customers" component={Customers} />
           <Route path="/rentals" component={Rentals} />

@@ -1,20 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const Input = ({name, lable, value, onChange, type, error, placeHoder}) => {
-  //object destructuring
+const Input = ({ name, label, error, ...rest }) => {
   return (
     <div className="form-group">
-      <lable htmlFor={name}>{lable}</lable>
-      <input
-        autoFocus
-        value={value}
-        onChange={onChange}
-        id={name}
-        name={name}
-        type={type}
-        className="form-control"
-        placeholder={placeHoder}
-      />
+      <label htmlFor={name}>{label}</label>
+      <input {...rest} name={name} id={name} className="form-control" />
       {error && <div className="alert alert-danger">{error}</div>}
     </div>
   );

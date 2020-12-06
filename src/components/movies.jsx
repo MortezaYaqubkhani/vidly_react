@@ -6,6 +6,8 @@ import Pagination from './pagination';
 import {paginate} from '../utils/paginate';
 import GenreList from './genreList';
 import MoviesTable from './moviesTable';
+import {Link} from 'react-router-dom';
+import SearchBar from './searchBox';
 
 class Movies extends Component {
   state = {
@@ -92,7 +94,12 @@ class Movies extends Component {
           />
         </div>
         <div className="col">
+          <Link to={'/movies/new'} className="btn btn-primary m-4">
+            New Movie
+          </Link>
+
           <p>showing {totlaCount} movies in the database ...</p>
+          <SearchBar data={data}/>
           <MoviesTable
             movies={movies}
             sortColumn={sortColumn}
