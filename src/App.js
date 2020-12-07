@@ -11,16 +11,18 @@ import Customers from './components/customers';
 import Rentals from './components/rentals';
 import NotFound from './components/notFound';
 import React from 'react';
-import MovieForms from './components/movieForm';
 import LoginForm from './components/loginForm';
 import RegisterForm from './components/registerForm';
 import NewMovieForm from './components/newMovieForm';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 library.add(fab, fas, far);
 
 function App() {
   return (
     <React.Fragment>
+      <ToastContainer />
       <Navbar />
       <main className="container">
         <Switch>
